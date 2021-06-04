@@ -1,0 +1,50 @@
+1) create package.json   $ npm init
+2) install dependences:
+    npm install --save express
+    npm install --save-dev nodemon  # live changes server
+3) create express app, and routes initial
+4) install mongodb server >>> https://tecadmin.net/install-mongodb-on-ubuntu/
+    start mongod: sudo systemctl start mongod  sudo systemctl stop mongod 
+    create and chmod /data/db
+
+5) mongodb in project: $ npm install --save mongoose
+  add connection in index.js app
+
+6) create models/ schemas - clients created
+7) create controller like clients
+    add in /index.js 
+     // eneable bodyparser
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
+8) use clientsController in routes and test paths with postman
+9) products controller, model and routes created
+10) add shortid and multer for upload images
+     npm install --save shortid multer  # shortid is for image names
+11) add orders controller
+    ## send new order
+    {
+      "client": "5d5d6c9b177c8b391afcdfd6",
+      "products": [
+        {
+          "product": "5d5d9bd622a10b5b6968de2b",
+          "qty": 2
+        },
+        {
+          "product": "5d5db7ddbb7b4e73efc63e21",
+          "qty": 1
+        }
+      ],
+      "amount": "50.0"
+    }
+12) eneable CORS
+    npm install --save cors
+    eneable in index.js
+13) sweet alert
+     npm install --save sweetalert2
+
+14) eneable public folder in index.js
+  // public folder
+  app.use(express.static('uploads'));
+
+15) 
+
